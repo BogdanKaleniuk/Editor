@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bogdankaleniuk.github.io/Editor/", // вставте ваш URL
+  "homepage": "https://bogdankaleniuk.github.io/Editor/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
