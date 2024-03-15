@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IEmail } from "../pages/home/types";
+import { queryClient } from "../Provider";
 
 class EmailService {
   private URL = "http://localhost:3000/emails";
@@ -13,6 +14,10 @@ class EmailService {
       text,
     });
     return data;
+  }
+  async deleteEmail(id: string) {
+    await axios.delete(`${this.URL}/${id}`);
+    await queryClient.refetchQueries(["email list"]);
   }
 }
 
